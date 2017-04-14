@@ -8,6 +8,6 @@ namespace _2011112243
 {
     public class TipoTripulacion
     {
-        
+        public String tipodeTripulacion;
     }
 }

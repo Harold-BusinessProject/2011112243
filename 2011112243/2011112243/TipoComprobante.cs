@@ -8,5 +8,6 @@ namespace _2011112243
 {
     public class TipoComprobante
     {
+        public String TipodeComprobante;
     }
 }

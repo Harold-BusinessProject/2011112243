@@ -15,7 +15,15 @@ namespace _2011112243
         public Cliente _Cliente;
         public TipoPago _TipoPago;
         public TipoComprobante _tipoComprobante;
-         public Venta (Servicio Servicio, Administrativo Administrativo, Cliente Cliente, TipoPago TipoPago, TipoComprobante  )
+
+        public Venta(Servicio Servicio, Administrativo Administrativo, Cliente Cliente, TipoPago TipoPago, TipoComprobante TipoComprobante  ) {
+            _Administrativo = Administrativo;
+            _Servicio = Servicio;
+            _Cliente = Cliente;
+            _TipoPago = TipoPago;
+            _tipoComprobante = TipoComprobante;
+
+        }
 
        
 
