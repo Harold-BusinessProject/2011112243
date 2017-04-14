@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace _2011112243
 {
-    class LugarViaje
+    public class LugarViaje
     {
+        public String idLugarViaje { get; set; }
+        public String dep { get; set; }
+        public String ciudad { get; set; }
+        public String horaAprox { get; set; }
+        public String fecha { get; set; }
+        public TipoLugar _TipoLugar;
     }
+
+
+
 }

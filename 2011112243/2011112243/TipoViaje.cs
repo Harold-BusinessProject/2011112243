@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace _2011112243
 {
-    class TipoViaje
+    public class TipoViaje
     {
+        public String idViaje { get; set; }
+        public String tipoViaje { get; set; }
+
     }
 }

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace _2011112243
 {
-    class Program
+   public class Program
     {
         static void Main(string[] args)
         {
         }
+
+
     }
 }
