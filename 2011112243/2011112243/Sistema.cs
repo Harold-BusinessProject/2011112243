@@ -8,20 +8,20 @@ namespace _2011112243
 {
     public class Sistema
     {
-        Cliente[] cliente = new Cliente[50];
-        Empleado[] empleado = new Empleado[50];
-        Administrativo[] administrativo = new Administrativo[50];
-        Tripulacion[] tripulacion = new Tripulacion[50];
-        Bus[] bus = new Bus[50];
-        Encomienda[] encomienda = new Encomienda[50];
-        LugarViaje[] lugarviaje = new LugarViaje[50];
-        TipoComprobante[] tipocomprobante = new TipoComprobante[50];
-        TipoLugar[] tipolugar = new TipoLugar[50];
-        TipoPago[] tipopago = new TipoPago[50];
-        TipoTripulacion[] tipotripulacion = new TipoTripulacion[50];
-        TipoViaje[] tipoviaje = new TipoViaje[50];
-        Transporte[] transporte = new Transporte[50];
-        Venta[] venta = new Venta[50];
+        Cliente[] cliente = new Cliente[150];
+        Empleado[] empleado = new Empleado[150];
+        Administrativo[] administrativo = new Administrativo[150];
+        Tripulacion[] tripulacion = new Tripulacion[150];
+        Bus[] bus = new Bus[150];
+        Encomienda[] encomienda = new Encomienda[150];
+        LugarViaje[] lugarviaje = new LugarViaje[150];
+        TipoComprobante[] tipocomprobante = new TipoComprobante[150];
+        TipoLugar[] tipolugar = new TipoLugar[150];
+        TipoPago[] tipopago = new TipoPago[150];
+        TipoTripulacion[] tipotripulacion = new TipoTripulacion[150];
+        TipoViaje[] tipoviaje = new TipoViaje[150];
+        Transporte[] transporte = new Transporte[150];
+        Venta[] venta = new Venta[150];
 
 
 
@@ -64,26 +64,121 @@ namespace _2011112243
         public void RealizarTransporte()
         {
             for (int i = 0; i < 50; i++) {
-                if( bus[i]._idBus == null)
+                if (bus[i]._idBus == null)
                 {
 
                     Random r = new Random();
                     int id = i;
-                    venta[i].idVenta =i.ToString();
-                    venta[i]._Servicio.tipoServicio = "Transpote";
-                    Console.WriteLine("Ingrese los campos requeridos: \n");
-                    venta[i].Costo = r.Next(50, 150);
 
-                     
+                    Console.WriteLine("Ingrese los campos requeridos: \n");
+
+                    Console.WriteLine("ID del Administrativo: ");
+                    String idAdm = Console.ReadLine();
+                    for (int j = 0; j < 50; j++) {
+                        if (idAdm == venta[j]._Administrativo.idEmp)
+                        {
+
+                            Console.WriteLine("Nombre del CLiente: ");
+                            venta[i]._Cliente.nom = Console.ReadLine();
+                            Console.WriteLine("dni del CLiente: ");
+                            venta[i]._Cliente.dni = Console.ReadLine();
+                            Console.WriteLine("Direccion del CLiente: ");
+                            venta[i]._Cliente.direccion = Console.ReadLine();
+                            Console.WriteLine("Email del CLiente: ");
+                            venta[i]._Cliente.email = Console.ReadLine();
+                            Console.WriteLine("Origen de Transporte: ");
+                            venta[i]._Servicio.Origen = Console.ReadLine();
+                            Console.WriteLine("ID del Tripulante 1: ");
+                            String idTripulante = Console.ReadLine();
+                            for (int k = 0; k < 50; k++)
+                            {
+                                if (idTripulante == tripulacion[i].idEmp)
+                                {
+                                    Console.WriteLine("Estado de Tripulante 1");
+                                    bus[k]._Tripulacion.estado = Console.ReadLine();
+                                    Console.WriteLine("horas de Trabajo de Tripulante 1");
+                                    bus[k]._Tripulacion.horasTrab = Console.ReadLine();
+                                    Console.WriteLine("Tipo de Tripulacion de Tripulante 1 -Piloto  - Copiloto  -Azafata");
+                                    bus[k]._Tripulacion._tipoTrip.tipodeTripulacion = Console.ReadLine();
+                                }
+                                else
+                                {
+                                    SeleccionarServicio();
+                                }
+                            }
+
+                            Console.WriteLine("ID del Tripulante 2: ");
+                            String idTripulante2 = Console.ReadLine();
+                            for (int k = 0; k < 50; k++)
+                            {
+                                if (idTripulante == tripulacion[i].idEmp)
+                                {
+                                    Console.WriteLine("Estado de Tripulante 2");
+                                    bus[k]._Tripulacion.estado = Console.ReadLine();
+                                    Console.WriteLine("horas de Trabajo de Tripulante 2");
+                                    bus[k]._Tripulacion.horasTrab = Console.ReadLine();
+                                    Console.WriteLine("Tipo de Tripulacion de Tripulante 2 -Piloto  - Copiloto  -Azafata");
+                                    bus[k]._Tripulacion._tipoTrip.tipodeTripulacion = Console.ReadLine();
+                                }
+                                else
+                                {
+                                    SeleccionarServicio();
+                                }
+
+                            }
+
+
+                            Console.WriteLine("ID del Tripulante 3: ");
+                            String idTripulante3 = Console.ReadLine();
+                            for (int k = 0; k < 50; k++)
+                            {
+                                if (idTripulante == tripulacion[i].idEmp)
+                                {
+                                    Console.WriteLine("Estado de Tripulante 3");
+                                    bus[k]._Tripulacion.estado = Console.ReadLine();
+                                    Console.WriteLine("horas de Trabajo de Tripulante 3");
+                                    bus[k]._Tripulacion.horasTrab = Console.ReadLine();
+                                    Console.WriteLine("Tipo de Tripulacion de Tripulante 3 -Piloto  - Copiloto  -Azafata");
+                                    bus[k]._Tripulacion._tipoTrip.tipodeTripulacion = Console.ReadLine();
+                                }
+                                else
+                                {
+                                    SeleccionarServicio();
+                                }
+
+                            }
+
+                            Console.WriteLine("Tipo de Pago - Efectivo  -Tarjeta de Credito  -Tarjeta de Devito");
+                            venta[j]._TipoPago.tipodePago = Console.ReadLine();
+                            Console.WriteLine("Tipo de Comprobante -Boleta  -Factura");
+                            venta[j]._tipoComprobante.TipodeComprobante = Console.ReadLine();
+                            Console.WriteLine("Numero de Asientos");
+                            transporte[i].nAsientos= Console.ReadLine();
+                            transporte[i]._TipoViaje.tipoViaje = Console.ReadLine();
+
+                            venta[i].idVenta = i.ToString();
+                            venta[i]._Servicio.idServicio = i.ToString();
+                            venta[i]._Servicio.tipoServicio = "Transpote";
+                            venta[i].Costo = r.Next(50, 150);
+
+
+
+                        }
+                        else
+                        {
+                            SeleccionarServicio();
+
+                        }
+
+                        }
+                    
 
                 }
 
+
+
             }
-
-
-
         }
-
         public void RealizarEncomienda()
         {
 
