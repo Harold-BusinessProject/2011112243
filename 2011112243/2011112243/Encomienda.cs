@@ -8,10 +8,10 @@ namespace _2011112243
 {
     public class Encomienda : Servicio
     {
-        public double Peso { get; set; }
+        public String peso { get; set; }
         public String dimensiones { get; set; }
         public LugarViaje _LugarViaje;
-
+        public String nbultos { get; set; }
         public String TipoServicio {get; set;}
         public Bus _Bus;
     public Encomienda (LugarViaje LugarViaje, Bus Bus) {
