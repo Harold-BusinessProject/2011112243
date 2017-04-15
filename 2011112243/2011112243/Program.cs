@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace _2011112243
 {
-   public class Program
-    {
-        static void Main(string[] args)
-        {
-        }
-
-
+    public class Program { 
+        public Sistema metodo = new Sistema();
+        static void Main(string[] args) {
+         
+            
     }
+    }
+
 }
+
+
+     

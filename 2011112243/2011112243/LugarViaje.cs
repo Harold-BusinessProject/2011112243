@@ -14,6 +14,14 @@ namespace _2011112243
         public String horaAprox { get; set; }
         public String fecha { get; set; }
         public TipoLugar _TipoLugar;
+
+
+        public LugarViaje(TipoLugar TipoLugar) {
+            _TipoLugar = TipoLugar;
+
+
+        }
+
     }
 
 

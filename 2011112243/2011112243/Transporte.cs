@@ -14,7 +14,7 @@ namespace _2011112243
         public Cliente _Cliente;
         public Bus _Bus;
         public LugarViaje _LugarViaje;
-        public String TipoServicio;
+        public String TipoServicio { get; set; }
 
         public Transporte(TipoViaje TipoViaje, Cliente Cliente, Bus Bus, LugarViaje LugarViaje) {
             _TipoViaje = TipoViaje;

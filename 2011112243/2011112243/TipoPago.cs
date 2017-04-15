@@ -8,6 +8,6 @@ namespace _2011112243
 {
     public class TipoPago
     {
-        public String tipodePago;
+        public String tipodePago { get; set; }
     }
 }
