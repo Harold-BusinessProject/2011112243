@@ -56,14 +56,29 @@ namespace _2011112243
 
                 case "5":
                     Console.WriteLine("Mostrar Relacion de Ventas  Seleccionado");
-
+                    MostrarVentas();
                     break;
             }
 
         }
         public void RealizarTransporte()
         {
+            for (int i = 0; i < 50; i++) {
+                if( bus[i]._idBus == null)
+                {
 
+                    Random r = new Random();
+                    int id = i;
+                    venta[i].idVenta =i.ToString();
+                    venta[i]._Servicio.tipoServicio = "Transpote";
+                    Console.WriteLine("Ingrese los campos requeridos: \n");
+                    venta[i].Costo = r.Next(50, 150);
+
+                     
+
+                }
+
+            }
 
 
 
@@ -117,7 +132,7 @@ namespace _2011112243
                 else
                 {
                     Console.WriteLine("[i+1]");
-                    Console.WriteLine("Codigo de Venta: " + venta[i].idVenta + "\n Tipo de Servicio: " + venta[i]._Servicio.tipoServicio + "\n Tipo de Pago: " + venta[i]._TipoPago.tipodePago + "\n Tipo de Comprobante: " + venta[i]._tipoComprobante.TipodeComprobante + "\n dni del cliente: " + venta[i]._Cliente.dni + "\n Nombre del Cliente: "
+                    Console.WriteLine("\n Codigo de Venta: " + venta[i].idVenta + "\n Tipo de Servicio: " + venta[i]._Servicio.tipoServicio + "\n Tipo de Pago: " + venta[i]._TipoPago.tipodePago + "\n Tipo de Comprobante: " + venta[i]._tipoComprobante.TipodeComprobante + "\n dni del cliente: " + venta[i]._Cliente.dni + "\n Nombre del Cliente: "
                         + venta[i]._Cliente.nom+ "\nEncargado de la venta"+ venta[i]._Administrativo.nom+ " "+ venta[i]._Administrativo.apePat+" " + venta[i]._Administrativo.apeMat + "\n Costo: "+venta[i].Costo);
 
                 }
